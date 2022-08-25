@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttericon/linearicons_free_icons.dart';
 import 'package:whatsapp_clone/whatsapp/dummy_data.dart';
+import 'dart:math' as math;
 
 import 'components/call_thumb.dart';
 
@@ -26,20 +28,32 @@ class CallsScreen extends StatelessWidget {
             subtitle: Row(
               children: [
                 if (datum["direction"] == "in")
-                  Icon(
-                    Icons.arrow_downward,
-                    color: datum["missed"]
-                        ? Colors.red
-                        : Theme.of(context).primaryColor,
+                  Transform.rotate(
+                    angle: 50 * math.pi / 180,
+                    child: Icon(
+                      LineariconsFree.arrow_down,
+                      color: datum["missed"]
+                          ? Colors.red
+                          : Theme.of(context).primaryColor,
+                    ),
                   ),
                 if (datum["direction"] == "out")
-                  Icon(
-                    Icons.arrow_upward,
-                    color: datum["missed"]
-                        ? Colors.red
-                        : Theme.of(context).primaryColor,
+                  Transform.rotate(
+                    angle: 50 * math.pi / 180,
+                    child: Icon(
+                      LineariconsFree.arrow_up,
+                      color: datum["missed"]
+                          ? Colors.red
+                          : Theme.of(context).primaryColor,
+                    ),
                   ),
-                Text(datum["last"]),
+                if (datum["count"] > 0) Text(" (${datum["count"]})  "),
+                Expanded(
+                    child: Text(
+                  datum["last"],
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                )),
               ],
             ),
             trailing: Icon(

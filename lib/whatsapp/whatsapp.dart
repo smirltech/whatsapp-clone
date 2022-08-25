@@ -19,7 +19,7 @@ class Whatsapp extends StatelessWidget {
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
           ),
-          title: const Text("WhatsApp"),
+          title: const Text("WhatsApp Clone"),
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
