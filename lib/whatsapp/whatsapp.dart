@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:whatsapp_clone/whatsapp/components/counting_label.dart';
 import 'package:whatsapp_clone/whatsapp/pages/calls/calls_screen.dart';
 import 'package:whatsapp_clone/whatsapp/pages/chats/chats_screen.dart';
 import 'package:whatsapp_clone/whatsapp/pages/status/status_screen.dart';
+
+import 'dummy_data.dart';
 
 class Whatsapp extends StatelessWidget {
   const Whatsapp({Key? key}) : super(key: key);
@@ -24,18 +27,33 @@ class Whatsapp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
-          bottom: const TabBar(tabs: [
-            Tab(
+          bottom: TabBar(tabs: [
+            const Tab(
               icon: Icon(Icons.camera_alt),
             ),
             Tab(
-              child: Text("CHATS"),
+              child: Row(
+                children: [
+                  const Expanded(
+                      child: Text(
+                    "CHATS",
+                    style: TextStyle(fontSize: 13),
+                  )),
+                  CountingLabel(count: chatsData.length),
+                ],
+              ),
             ),
-            Tab(
-              child: Text("STATUS"),
+            const Tab(
+              child: Text(
+                "STATUS",
+                style: TextStyle(fontSize: 13),
+              ),
             ),
-            Tab(
-              child: Text("CALLS"),
+            const Tab(
+              child: Text(
+                "CALLS",
+                style: TextStyle(fontSize: 13),
+              ),
             ),
           ]),
         ),
@@ -45,10 +63,6 @@ class Whatsapp extends StatelessWidget {
           StatusScreen(),
           CallsScreen(),
         ]),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.message),
-        ),
       ),
     );
   }

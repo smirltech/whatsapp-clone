@@ -8,15 +8,21 @@ class ChatsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: ListView.builder(
-        itemCount: chatsData.length,
-        itemBuilder: (context, index) {
-          return ChatsCard(
-            data: chatsData[index],
-          );
-        },
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: ListView.builder(
+          itemCount: chatsData.length,
+          itemBuilder: (context, index) {
+            return ChatsCard(
+              data: chatsData[index],
+            );
+          },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.message),
       ),
     );
   }
