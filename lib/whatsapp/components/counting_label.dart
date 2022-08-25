@@ -15,7 +15,7 @@ class CountingLabel extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 3),
         child: Text(
           count > 9 ? "9+" : count.toString(),
-          style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 12),
+          style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 11),
         ),
       ),
     );

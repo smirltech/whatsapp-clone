@@ -27,35 +27,40 @@ class Whatsapp extends StatelessWidget {
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
-          bottom: TabBar(tabs: [
-            const Tab(
-              icon: Icon(Icons.camera_alt),
-            ),
-            Tab(
-              child: Row(
-                children: [
-                  const Expanded(
+          bottom: TabBar(
+            tabs: [
+              const Tab(
+                icon: Icon(Icons.camera_alt),
+                iconMargin: EdgeInsets.zero,
+              ),
+              Tab(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Expanded(
                       child: Text(
-                    "CHATS",
-                    style: TextStyle(fontSize: 13),
-                  )),
-                  CountingLabel(count: chatsData.length),
-                ],
+                        "CHATS",
+                        style: TextStyle(fontSize: 13),
+                      ),
+                    ),
+                    CountingLabel(count: chatsData.length),
+                  ],
+                ),
               ),
-            ),
-            const Tab(
-              child: Text(
-                "STATUS",
-                style: TextStyle(fontSize: 13),
+              const Tab(
+                child: Text(
+                  "STATUS",
+                  style: TextStyle(fontSize: 13),
+                ),
               ),
-            ),
-            const Tab(
-              child: Text(
-                "CALLS",
-                style: TextStyle(fontSize: 13),
+              const Tab(
+                child: Text(
+                  "CALLS",
+                  style: TextStyle(fontSize: 13),
+                ),
               ),
-            ),
-          ]),
+            ],
+          ),
         ),
         body: const TabBarView(children: [
           Text("First"),
