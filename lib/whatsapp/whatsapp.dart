@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:whatsapp_clone/whatsapp/pages/calls/calls_screen.dart';
 import 'package:whatsapp_clone/whatsapp/pages/chats/chats_screen.dart';
 import 'package:whatsapp_clone/whatsapp/pages/status/status_screen.dart';
 
@@ -42,7 +43,7 @@ class Whatsapp extends StatelessWidget {
           Text("First"),
           ChatsScreen(),
           StatusScreen(),
-          Text("Fourth"),
+          CallsScreen(),
         ]),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},

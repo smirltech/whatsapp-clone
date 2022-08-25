@@ -183,3 +183,30 @@ List<Map<String, dynamic>> statusData = [
     "count": 1,
   },
 ];
+
+List<Map<String, dynamic>> callsData = [
+  {
+    "thumb": "assets/images/profiles/p3.jpg",
+    "user": "Mimi Black",
+    "last": "Today, 14:30",
+    "count": 2,
+    "direction": "in",
+    "missed": true,
+  },
+  {
+    "thumb": "assets/images/profiles/p1.jpg",
+    "user": "John Doe",
+    "last": "Today, 08:30",
+    "count": 4,
+    "direction": "in",
+    "missed": false,
+  },
+  {
+    "thumb": "assets/images/profiles/p2.jpg",
+    "user": "Jane Doe",
+    "last": "Yesterday, 21:10",
+    "count": 1,
+    "direction": "out",
+    "missed": true,
+  },
+];

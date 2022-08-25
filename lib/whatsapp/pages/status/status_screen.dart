@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/whatsapp/dummy_data.dart';
 
+import 'components/status_thumb.dart';
+
 class StatusScreen extends StatelessWidget {
   const StatusScreen({Key? key}) : super(key: key);
 
@@ -14,6 +16,7 @@ class StatusScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ListTile(
+            onTap: () {},
             leading: Stack(
               children: [
                 const CircleAvatar(
@@ -54,10 +57,8 @@ class StatusScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 Map<String, dynamic> datum = statusData[index];
                 return ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: AssetImage(datum["thumb"]),
-                    radius: 25,
-                  ),
+                  onTap: () {},
+                  leading: StatusThumb(datum: datum),
                   title: Text(
                     datum["user"],
                     style: const TextStyle(fontWeight: FontWeight.bold),
