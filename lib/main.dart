@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/whatsapp/pages/splash/splash_screen.dart';
 import 'package:whatsapp_clone/whatsapp/whatsapp.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const Whatsapp(),
+      home: const SplashScreen(),
     );
   }
 }
