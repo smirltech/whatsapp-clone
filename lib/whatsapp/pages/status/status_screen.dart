@@ -22,7 +22,7 @@ class StatusScreen extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     backgroundImage:
-                        AssetImage("assets/images/profiles/baby.jpg"),
+                        AssetImage("assets/images/profiles/francis.jpg"),
                     radius: 25,
                   ),
                   Positioned(
